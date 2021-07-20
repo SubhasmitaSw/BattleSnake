@@ -3,6 +3,7 @@ from typing import List, Dict
 
 """
 This file can be a nice home for your move logic, and to write helper functions.
+
 We have started this for you, with a function to help remove the 'neck' direction
 from the list of possible moves!
 """
@@ -16,6 +17,7 @@ def avoid_my_neck(my_head: Dict[str, int], my_body: List[dict], possible_moves: 
             e.g. [ {"x": 0, "y": 0}, {"x": 1, "y": 0}, {"x": 2, "y": 0} ]
     possible_moves: List of strings. Moves to pick from.
             e.g. ["up", "down", "left", "right"]
+
     return: The list of remaining possible_moves, with the 'neck' direction removed
     """
     my_neck = my_body[1]  # The segment of body right after the head is the 'neck'
@@ -36,10 +38,13 @@ def choose_move(data: dict) -> str:
     """
     data: Dictionary of all Game Board data as received from the Battlesnake Engine.
     For a full example of 'data', see https://docs.battlesnake.com/references/api/sample-move-request
+
     return: A String, the single move to make. One of "up", "down", "left" or "right".
+
     Use the information in 'data' to decide your next move. The 'data' variable can be interacted
     with as a Python Dictionary, and contains all of the information about the Battlesnake board
     for each move of the game.
+
     """
     my_head = data["you"]["head"]  # A dictionary of x/y coordinates like {"x": 0, "y": 0}
     my_body = data["you"]["body"]  # A list of x/y coordinate dictionaries like [ {"x": 0, "y": 0}, {"x": 1, "y": 0}, {"x": 2, "y": 0} ]

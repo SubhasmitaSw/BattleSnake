@@ -1,0 +1,9 @@
+[tool.poetry]
+name = "Battlesnake"
+version = "1.0.0"
+description = "A simple Battlesnake written in Python and powered by Machine Learning"
+authors = subhasmita-swain
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Flask = "^2.0.1"

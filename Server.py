@@ -1,6 +1,7 @@
 import logging
 import os
 
+import random
 from flask import Flask
 from flask import request
 
@@ -15,17 +16,19 @@ def handle_info():
     """
     This function is called when you register your Battlesnake on play.battlesnake.com
     See https://docs.battlesnake.com/guides/getting-started#step-4-register-your-battlesnake
+
     It controls your Battlesnake appearance and author permissions.
     For customization options, see https://docs.battlesnake.com/references/personalization
+
     TIP: If you open your Battlesnake URL in browser you should see this data.
     """
     print("INFO")
     return {
         "apiversion": "1",
-        "author": "",  # TODO: Your Battlesnake Username
-        "color": "#888888",  # TODO: Personalize
-        "head": "default",  # TODO: Personalize
-        "tail": "default",  # TODO: Personalize
+        "author": "subhasmita-swain", 
+        "color": random.choice(["#ad0a4e","#FFE873"]), 
+        "head": "tongue",  
+        "tail": "curled",  
     }
 
 
